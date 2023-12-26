@@ -36,7 +36,7 @@ Ans: db.products.find({'$or':[{'product_color':'indigo'},{'product_price':492}]}
 
 10.Delete the products which product price value are same
 
-Ans: db.product.aggregate([{ $group:{ _id:"$product_price", 
+Ans: db.products.aggregate([{ $group:{ _id:"$product_price", 
 ids:{$push:"$id"}, count:{$sum:1}} },
 {
 $match:{
