@@ -44,6 +44,6 @@ $match:{
   }
   }]).forEach(
  function(item){
- db.product.deleteOne({id:item.ids[0]});
+ db.products.deleteOne({id:item.ids[0]});
  }
  );
